@@ -18,7 +18,7 @@ NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-1.x/ndoutils-1.5.
 
 CENTREON=http://download.centreon.com/index.php?id=4264                       # Centreon download URL
 
-NDO2DB=http://www.nicolargo.com/blogdata/ndo2db                    #NDO2DB init script
+NDO2DB=https://raw.github.com/Nesousx/centreon/master/ndo2db                   #NDO2DB init script
 
 ### Script variables (only modify this if you know what you are doing)
 
@@ -171,4 +171,4 @@ do_with_root tar xzf centreon.tar.gz
 cd centreon*
 
 	### Installation Centreon
-do_with_root ./install.sh -f centreon
+do_with_root ./install.sh -i
