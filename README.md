@@ -1,0 +1,4 @@
+centreon
+========
+
+centreon install script
