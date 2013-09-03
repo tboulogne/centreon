@@ -1,6 +1,8 @@
 centreon
 ========
 
+******* Work in Progress ******
+
 Centreon install script
 
 How to use:
