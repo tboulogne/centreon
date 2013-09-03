@@ -6,12 +6,19 @@
 ### User variables (modify this according to your needs)
 
 NAGIOS_WEB_PASSWD=plop        #password for nagois web admin, in plain text
+
 NAGIOS_PASSWD_CLEAR=plop      #password for nagios user
+
 NAGIOS_CORE=http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.5.0.tar.gz                  #URL of nagios core archive
+
 NAGIOS_PLUGINS=http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.16.tar.gz  #URL of nagios plugis archive
 #Not working ---> must use a function, pass is 'plop' NDO_PASSWORD=plop              #NDO db password
+
 NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-1.x/ndoutils-1.5.2/ndoutils-1.5.2.tar.gz
+
 CENTREON=http://download.centreon.com/index.php?id=4264                       # Centreon download URL
+
+NDO2DB=http://www.nicolargo.com/blogdata/ndo2db                    #NDO2DB init script
 
 ### Script variables (only modify this if you know what you are doing)
 
@@ -149,6 +156,7 @@ do_with_root chown nagios:nagios /usr/local/nagios/etc/ndo*
 cd db
 do_with_root ./installdb -u ndo -p plop -h localhost -d ndo
 
+do_with_root wget -O /etc/init.d/ndo2db $NDO2DB
 do_with_root chown root:root /etc/init.d/ndo2db
 do_with_root chmod 755 /etc/init.d/ndo2db
 do_with_root update-rc.d ndo2db defaults
