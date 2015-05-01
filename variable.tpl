@@ -58,6 +58,8 @@ INSTALL_DIR_CENTREON="/usr/local/centreon"
 CENTREON_LOG="/usr/local/centreon/log"
 ## Centreon config files
 CENTREON_ETC="/etc/centreon"
+BROKER_ETC="/etc/centreon"
+BROKER_INIT_SCRIPT="/etc/init.d/cbd"
 ## Centreon run dir (all .pid, .run, .lock)
 CENTREON_RUNDIR="/var/run/centreon/"
 ## Centreon generation config directory
@@ -75,6 +77,9 @@ CENTREON_VARLIB="/var/lib/centreon/"
 ## Some plugins require temporary datas to process output.
 ## These temp datas are store in the CENTPLUGINS_TMP path.
 CENTPLUGINS_TMP="/var/lib/centreon/centplugins"
+CENTREON_DATADIR="/usr/local/centreon/data"
+CENTREON_GROUP="centreon"
+CENTREON_USER="centreon"
 ## path to centpluginsTraps binaries
 CENTPLUGINSTRAPS_BINDIR="/usr/local/centreon/bin"
 ## path for snmptt installation
@@ -98,19 +103,20 @@ CENTSTORAGE_INSTALL_RUNLVL=1
 ## Install directory
 INSTALL_DIR_NAGIOS="/usr/local/nagios"
 ## Configuration directory
-NAGIOS_ETC="/usr/local/nagios/etc"
+MONITORINGENGINE_ETC="/usr/local/nagios/etc"
 ## Plugins directory
-NAGIOS_PLUGIN="/usr/local/nagios/libexec"
+PLUGIN_DIR="/usr/local/nagios/libexec"
 ## Images (logos) directory
 NAGIOS_IMG="/usr/local/nagios/share/images/logos"
 ## The nagios binary (optional)
-NAGIOS_BINARY="/usr/local/nagios/bin/nagios"
+MONITORINGENGINE_BINARY="/usr/local/nagios/bin/nagios"
 ## The nagiostats binary (optional)
 NAGIOSTATS_BINARY="/usr/local/nagios/bin/nagiostats"
 ## Logging directory
 NAGIOS_VAR="/usr/local/nagios/var"
 ## Nagios user (optional)
-NAGIOS_USER="nagios"
+#NAGIOS_USER="nagios"
+MONITORINGENGINE_USER="nagios"
 ## If you want to force NAGIOS_USER, set FORCE_NAGIOS_USER to 1 (optional)
 FORCE_NAGIOS_USER=1
 ## Nagios group (optional)
@@ -124,7 +130,9 @@ NAGIOS_P1_FILE="/usr/local/nagios/bin/p1.pl"
 ## Nagios NDO module
 NDOMOD_BINARY="/usr/local/nagios/bin/ndomod.o"
 ## Nagios init script (optional)
-NAGIOS_INIT_SCRIPT="/etc/init.d/nagios"
+MONITORINGENGINE_INIT_SCRIPT="/etc/init.d/nagios"
+MONITORINGENGINE_LOG="/var/log/"
+
 ################################################## ###################
 ## End: Nagios preferences
 ################################################## ###################
