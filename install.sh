@@ -9,6 +9,7 @@ NAGIOS_VERSION=nagios-4.1.0rc1
 NAGIOS_VERSION_SHORT=nagios-4.1.0
 NAGIOS_PLUGIN_VERSION=2.0.3
 CENTREON_VERSION=2.6.0
+VARIABLE_FILE_PATH=`pwd`
 
 NAGIOS_WEB_PASSWD=plop        #password for nagois web admin, in plain text
 
@@ -182,4 +183,4 @@ do_with_root tar xzf centreon-$CENTREON_VERSION.tar.gz
 cd centreon-$CENTREON_VERSION
 
 	### Installation Centreon
-do_with_root ./install.sh -i
+do_with_root ./install.sh -i -f $VARIABLE_FILE_PATH/variable.tpl
