@@ -18,7 +18,7 @@ NAGIOS_CORE=http://netcologne.dl.sourceforge.net/project/nagios/nagios-4.x/$NAGI
 NAGIOS_PLUGINS=http://nagios-plugins.org/download/nagios-plugins-$NAGIOS_PLUGIN_VERSION.tar.gz  #URL of nagios plugis archive
 #Not working ---> must use a function, pass is 'plop' NDO_PASSWORD=plop              #NDO db password
 
-NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-1.x/ndoutils-1.5.2/ndoutils-1.5.2.tar.gz
+NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-2.x/ndoutils-2.0.0/ndoutils-2.0.0.tar.gz
 
 CENTREON=https://download.centreon.com/index.php?product=centreon-2.6.0&action=ask&id=4622                       # Centreon download URL
 
