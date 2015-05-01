@@ -9,6 +9,8 @@ NAGIOS_VERSION=nagios-4.1.0rc1
 NAGIOS_VERSION_SHORT=nagios-4.1.0
 NAGIOS_PLUGIN_VERSION=2.0.3
 CENTREON_VERSION=2.6.0
+NDOUTILS_VERSION=2.0.0
+
 VARIABLE_FILE_PATH=`pwd`
 
 NAGIOS_WEB_PASSWD=plop        #password for nagois web admin, in plain text
@@ -20,7 +22,7 @@ NAGIOS_CORE=http://netcologne.dl.sourceforge.net/project/nagios/nagios-4.x/$NAGI
 NAGIOS_PLUGINS=http://nagios-plugins.org/download/nagios-plugins-$NAGIOS_PLUGIN_VERSION.tar.gz  #URL of nagios plugis archive
 #Not working ---> must use a function, pass is 'plop' NDO_PASSWORD=plop              #NDO db password
 
-NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-2.x/ndoutils-2.0.0/ndoutils-2.0.0.tar.gz
+NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-2.x/ndoutils-$NDOUTILS_VERSION/ndoutils-$NDOUTILS_VERSION.tar.gz
 
 CENTREON=https://s3-eu-west-1.amazonaws.com/centreon-download/public/centreon/centreon-$CENTREON_VERSION.tar.gz                       # Centreon download URL
 
@@ -123,10 +125,10 @@ mysql -u root -h localhost -p -Bse 'GRANT ALL ON ndo.* TO "ndo"@"localhost" IDEN
 
 cd /usr/src
 echo "***** Downloading NDOUtils *****"
-do_with_root wget -O ndoutils.tar.gz $NDOOUTILS
+do_with_root wget $NDOUTILS
 echo "***** Extracting NDOUtils *****"
-do_with_root tar xzf ndoutils.tar.gz
-cd ndoutils*
+do_with_root tar xzf ndoutils-$NDOUTILS_VERSION.tar.gz
+cd ndoutils-$NDOUTILS_VERSION
 echo "****** Configuring and compiling NDOUtils *****"
 ./configure --disable-pgsql --with-mysql-lib=/usr/lib/mysql --with-ndo2db-user=nagios --with-ndo2db-group=nagios
 do_with_root make
