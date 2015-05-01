@@ -187,4 +187,4 @@ do_with_root tar xzf centreon-$CENTREON_VERSION.tar.gz
 cd centreon-$CENTREON_VERSION
 
 	### Installation Centreon
-do_with_root ./install.sh -i -f $VARIABLE_FILE_PATH/variable.tpl
+do_with_root ./install.sh -i -f $VARIABLE_FILE_PATH/variables.tmpl
