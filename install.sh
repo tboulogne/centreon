@@ -72,7 +72,7 @@ cd /usr/src
 echo "***** Downloading $NAGIOS_CORE to $PWD *****"
 do_with_root wget $NAGIOS_CORE 
 echo "***** Extracting Nagios *****"
-do_with_root tar xzf nagios-*
+do_with_root tar xzf $NAGIOS_VERSION.tgz
 cd $NAGIOS_VERSION
 echo "***** Configuration and compilation of Nagios core *****"
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios --with-command-user=nagios --with-command-group=nagios --enable-event-broker --enable-nanosleep --enable-embedded-perl --with-perlcache
