@@ -181,4 +181,4 @@ do_with_root tar xzf centreon.tar.gz
 cd centreon*
 
 	### Installation Centreon
-do_with_root ./install.sh -i
+#do_with_root ./install.sh -i
