@@ -99,6 +99,12 @@ do_with_root make
 do_with_root make install
 echo "***** Done compiling *****"
 echo "***** Checking nagios config *****"
+do_with_root mkdir /usr/local/nagios/var
+do_with_root chown nagios:nagios /usr/local/nagios/var
+do_with_root mkdir /usr/local/nagios/var/spool
+do_with_root chown nagios:nagios /usr/local/nagios/var/spool
+do_with_root mkdir /usr/local/nagios/var/spool/checkresults
+do_with_root chown nagios:nagios /usr/local/nagios/var/spool/checkresults
 do_with_root /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 do_with_root /etc/init.d/nagios start
 echo "Nagios installation done, check it at http://YOURIP/nagios/"
