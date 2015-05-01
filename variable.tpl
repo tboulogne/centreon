@@ -97,33 +97,33 @@ CENTSTORAGE_INSTALL_RUNLVL=1
 ## Install directory
 INSTALL_DIR_NAGIOS="/usr/local/nagios"
 ## Configuration directory
-NAGIOS_ETC="/usr/local/nagios/etc"
+MONITORING_ETC="/usr/local/nagios/etc"
 ## Plugins directory
-NAGIOS_PLUGIN="/usr/local/nagios/libexec"
+MONITORING_PLUGIN="/usr/local/nagios/libexec"
 ## Images (logos) directory
-NAGIOS_IMG="/usr/local/nagios/share/images/logos"
+MONITORING_IMG="/usr/local/nagios/share/images/logos"
 ## The nagios binary (optional)
-NAGIOS_BINARY="/usr/local/nagios/bin/nagios"
+MONITORING_BINARY="/usr/local/nagios/bin/nagios"
 ## The nagiostats binary (optional)
 NAGIOSTATS_BINARY="/usr/local/nagios/bin/nagiostats"
 ## Logging directory
-NAGIOS_VAR="/usr/local/nagios/var"
+MONITORING_VAR="/usr/local/nagios/var"
 ## Nagios user (optional)
-NAGIOS_USER="nagios"
-## If you want to force NAGIOS_USER, set FORCE_NAGIOS_USER to 1 (optional)
-FORCE_NAGIOS_USER=1
+MONITORING_USER="nagios"
+## If you want to force MONITORING_USER, set FORCE_MONITORING_USER to 1 (optional)
+FORCE_MONITORING_USER=1
 ## Nagios group (optional)
-NAGIOS_GROUP="nagiosgrp"
-## If you want to force NAGIOS_GROUP, set FORCE_NAGIOS_GROUP to 1 (optional)
-FORCE_NAGIOS_GROUP=1
+MONITORING_GROUP="nagiosgrp"
+## If you want to force MONITORING_GROUP, set FORCE_MONITORING_GROUP to 1 (optional)
+FORCE_MONITORING_GROUP=1
 ## Nagios p1.pl file (perl embedded)
-NAGIOS_P1_FILE="/usr/local/nagios/bin/p1.pl"
+MONITORING_P1_FILE="/usr/local/nagios/bin/p1.pl"
 ## If you want to not use NDO (not recommended)
 #FORCE_NOT_USE_NDO=1
 ## Nagios NDO module
 NDOMOD_BINARY="/usr/local/nagios/bin/ndomod.o"
 ## Nagios init script (optional)
-NAGIOS_INIT_SCRIPT="/etc/init.d/nagios"
+MONITORING_INIT_SCRIPT="/etc/init.d/nagios"
 ################################################## ###################
 ## End: Nagios preferences
 ################################################## ###################
