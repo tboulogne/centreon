@@ -20,7 +20,7 @@ NAGIOS_PLUGINS=http://nagios-plugins.org/download/nagios-plugins-$NAGIOS_PLUGIN_
 
 NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-1.x/ndoutils-1.5.2/ndoutils-1.5.2.tar.gz
 
-CENTREON=http://download.centreon.com/index.php?id=4264                       # Centreon download URL
+CENTREON=https://download.centreon.com/index.php?product=centreon-2.6.0&action=ask&id=4622                       # Centreon download URL
 
 NDO2DB=https://raw.github.com/Nesousx/centreon/master/ndo2db                   #NDO2DB init script
 
