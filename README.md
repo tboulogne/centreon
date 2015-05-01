@@ -21,9 +21,9 @@ do_with_root ./install.sh -i -f $VARIABLE_FILE_PATH/variables.tmpl
 Centreon install script
 
 How to use:
-
-	*clone:
+````
 git clone
 cd centreon
 sudo ./install.sh
+````
 	
