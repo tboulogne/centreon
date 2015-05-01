@@ -70,6 +70,8 @@ CENTSTORAGE_RRD="/var/lib/centreon"
 ## path to centstorage binary
 CENTSTORAGE_BINDIR="/usr/local/centreon/bin"
 CENTREON_BINDIR="/usr/local/centreon/bin"
+CENTREONTRAPD_BINDIR="/usr/local/centreon/bin"
+
 ## path to centcore binary
 CENTCORE_BINDIR="/usr/local/centreon/bin"
 ## libraries temporary files directory
@@ -143,7 +145,7 @@ MONITORINGENGINE_LOG="/var/log/"
 ## Apache configuration directory (optional)
 DIR_APACHE="/etc/apache2"
 ## Apache local specific configuration directory (optional)
-DIR_APACHE_CONF="/etc/apache2/conf.d"
+DIR_APACHE_CONF="/etc/apache2/conf-available"
 ## Apache configuration file. Only file name. (optional)
 APACHE_CONF="apache2.conf"
 ## Apache user (optional)
