@@ -57,7 +57,7 @@ echo "***** Installing of prereqisites *****"
 do_with_root apt-get update
 do_with_root apt-get upgrade -y
 #libradiusclient-ng-dev
-do_with_root apt-get install build-essential sudo apache2 wget libssl-dev rrdtool bsd-mailx librrds-perl libapache2-mod-php5 php5 php-pear php5-gd php5-ldap php5-snmp libperl-dev rrdtool librrds-perl bind9-host dnsutils bind9utils libradius1 qstat radiusclient1 snmp snmpd libgd2-xpm-dev libpng12-dev libjpeg62 mysql-server php5-mysql libmysqlclient15-dev fping libnet-snmp-perl libldap-dev libmysqlclient-dev libgnutls-dev  -y
+do_with_root apt-get install build-essential sudo apache2 wget unzip libssl-dev rrdtool bsd-mailx librrds-perl libapache2-mod-php5 php5 php-pear php5-gd php5-ldap php5-snmp libperl-dev rrdtool librrds-perl bind9-host dnsutils bind9utils libradius1 qstat radiusclient1 snmp snmpd libgd2-xpm-dev libpng12-dev libjpeg62 mysql-server php5-mysql libmysqlclient15-dev fping libnet-snmp-perl libldap-dev libmysqlclient-dev libgnutls-dev  -y
 echo "***** Done with prerequisites *****"
 
 ### Create users
@@ -78,10 +78,11 @@ echo "***** Extracting Nagios *****"
 do_with_root tar xzf $NAGIOS_VERSION.tar.gz
 cd $NAGIOS_VERSION
 echo "***** Configuration and compilation of Nagios core *****"
-./configure --with-nagios-user=nagios --with-nagios-group=nagios --with-command-user=nagios --with-command-group=nagios --enable-event-broker --enable-nanosleep --enable-embedded-perl --with-perlcache
+./configure --with-nagios-user=nagios --with-nagios-group=nagios --with-command-user=nagios --with-command-group=nagios --enable-event-broker --enable-nanosleep --enable-embedded-perl --with-perlcache --with-init-dir="/etc/init.d/" --with-httpd-conf="/etc/apache2/sites-enabled/"
 do_with_root make all
 do_with_root make fullinstall
 do_with_root make install-config
+do_with_root make install-init
 echo "***** Done compiling *****"
 do_with_root ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
 APT=apt-get -y
