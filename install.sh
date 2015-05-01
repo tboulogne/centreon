@@ -8,6 +8,7 @@
 NAGIOS_VERSION=nagios-4.1.0rc1 
 NAGIOS_VERSION_SHORT=nagios-4.1.0
 NAGIOS_PLUGIN_VERSION=2.0.3
+CENTREON_VERSION=2.6.0
 
 NAGIOS_WEB_PASSWD=plop        #password for nagois web admin, in plain text
 
@@ -20,7 +21,7 @@ NAGIOS_PLUGINS=http://nagios-plugins.org/download/nagios-plugins-$NAGIOS_PLUGIN_
 
 NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-2.x/ndoutils-2.0.0/ndoutils-2.0.0.tar.gz
 
-CENTREON=https://download.centreon.com/index.php?product=centreon-2.6.0&action=ask&id=4622                       # Centreon download URL
+CENTREON=https://s3-eu-west-1.amazonaws.com/centreon-download/public/centreon/centreon-$CENTREON_VERSION.tar.gz                       # Centreon download URL
 
 NDO2DB=https://raw.github.com/Nesousx/centreon/master/ndo2db                   #NDO2DB init script
 
@@ -176,9 +177,9 @@ do_with_root /etc/init.d/nagios restart
 
 	### Récupération Centreon
 cd /usr/src
-do_with_root wget -O centreon.tar.gz $CENTREON
-do_with_root tar xzf centreon.tar.gz
-cd centreon*
+do_with_root wget $CENTREON
+do_with_root tar xzf centreon-$CENTREON_VERSION.tar.gz
+cd centreon-$CENTREON_VERSION
 
 	### Installation Centreon
-#do_with_root ./install.sh -i
+do_with_root ./install.sh -i
