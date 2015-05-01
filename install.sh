@@ -6,7 +6,8 @@
 ### User variables (modify this according to your needs)
 
 NAGIOS_VERSION=nagios-4.1.0rc1 
-NAGIOS_VERSION_SHORT
+NAGIOS_VERSION_SHORT=nagios-4.1.0
+NAGIOS_PLUGIN_VERSION=2.0.3
 
 NAGIOS_WEB_PASSWD=plop        #password for nagois web admin, in plain text
 
@@ -14,7 +15,7 @@ NAGIOS_PASSWD_CLEAR=plop      #password for nagios user
 
 NAGIOS_CORE=http://netcologne.dl.sourceforge.net/project/nagios/nagios-4.x/$NAGIOS_VERSION_SHORT/$NAGIOS_VERSION.tar.gz                  #URL of nagios core archive
 
-NAGIOS_PLUGINS=http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.16.tar.gz  #URL of nagios plugis archive
+NAGIOS_PLUGINS=http://nagios-plugins.org/download/nagios-plugins-$NAGIOS_PLUGIN_VERSION.tar.gz  #URL of nagios plugis archive
 #Not working ---> must use a function, pass is 'plop' NDO_PASSWORD=plop              #NDO db password
 
 NDOUTILS=http://sourceforge.net/projects/nagios/files/ndoutils-1.x/ndoutils-1.5.2/ndoutils-1.5.2.tar.gz
@@ -91,7 +92,7 @@ echo "***** Downloading $NAGIOS_PLUGINS to $PWD *****"
 do_with_root wget $NAGIOS_PLUGINS
 echo "***** Extracting Nagios *****"
 do_with_root tar xzf nagios-plugins*
-cd nagios-plugins-*
+cd nagios-plugins-$NAGIOS_PLUGIN_VERSION
 echo "***** Compiling and installing Nagios plugins *****"
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
 do_with_root make
