@@ -67,6 +67,7 @@ CENTREON_GENDIR="/usr/local/centreon"
 CENTSTORAGE_RRD="/var/lib/centreon"
 ## path to centstorage binary
 CENTSTORAGE_BINDIR="/usr/local/centreon/bin"
+CENTREON_BINDIR="/usr/local/centreon/bin"
 ## path to centcore binary
 CENTCORE_BINDIR="/usr/local/centreon/bin"
 ## libraries temporary files directory
