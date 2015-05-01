@@ -93,8 +93,8 @@ do_with_root /etc/init.d/apache2 reload
 cd /usr/src
 echo "***** Downloading $NAGIOS_PLUGINS to $PWD *****"
 do_with_root wget $NAGIOS_PLUGINS
-echo "***** Extracting Nagios *****"
-do_with_root tar xzf nagios-plugins*
+echo "***** Extracting Nagios Plugins*****"
+do_with_root tar xzf nagios-plugins-$NAGIOS_PLUGIN_VERSION.tar.gz
 cd nagios-plugins-$NAGIOS_PLUGIN_VERSION
 echo "***** Compiling and installing Nagios plugins *****"
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
