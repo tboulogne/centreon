@@ -22,7 +22,7 @@ Centreon install script
 
 How to use:
 ````
-git clone
+git clone https://github.com/tboulogne/centreon.git
 cd centreon
 sudo ./install.sh
 ````
