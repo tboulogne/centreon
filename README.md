@@ -1,7 +1,7 @@
 centreon
 ========
 
-Modify the original script (https://github.com/Nesousx/centreon) to work on debian/ubuntu 14.04 and make some fonctional changes:
+Modify the original script (https://github.com/Nesousx/centreon) to work on debian/ubuntu 14.04 and make some improvements:
 
 Add variables for version of scripts, currents are :
 ```
