@@ -57,7 +57,7 @@ echo "***** Installing of prereqisites *****"
 do_with_root apt-get update
 do_with_root apt-get upgrade -y
 #libradiusclient-ng-dev
-do_with_root apt-get install build-essential sudo apache2 wget rrdtool bsd-mailx librrds-perl libapache2-mod-php5 php5 php-pear php5-gd php5-ldap php5-snmp libperl-dev rrdtool librrds-perl bind9-host dnsutils bind9utils libradius1 qstat radiusclient1 snmp snmpd libgd2-xpm-dev libpng12-dev libjpeg62 mysql-server php5-mysql libmysqlclient15-dev fping libnet-snmp-perl libldap-dev libmysqlclient-dev libgnutls-dev  -y
+do_with_root apt-get install build-essential sudo apache2 wget libssl-dev rrdtool bsd-mailx librrds-perl libapache2-mod-php5 php5 php-pear php5-gd php5-ldap php5-snmp libperl-dev rrdtool librrds-perl bind9-host dnsutils bind9utils libradius1 qstat radiusclient1 snmp snmpd libgd2-xpm-dev libpng12-dev libjpeg62 mysql-server php5-mysql libmysqlclient15-dev fping libnet-snmp-perl libldap-dev libmysqlclient-dev libgnutls-dev  -y
 echo "***** Done with prerequisites *****"
 
 ### Create users
