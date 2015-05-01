@@ -5,11 +5,14 @@
 
 ### User variables (modify this according to your needs)
 
+NAGIOS_VERSION=nagios-4.1.0rc1 
+NAGIOS_VERSION_SHORT
+
 NAGIOS_WEB_PASSWD=plop        #password for nagois web admin, in plain text
 
 NAGIOS_PASSWD_CLEAR=plop      #password for nagios user
 
-NAGIOS_CORE=http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.5.0.tar.gz                  #URL of nagios core archive
+NAGIOS_CORE=http://netcologne.dl.sourceforge.net/project/nagios/nagios-4.x/$NAGIOS_VERSION_SHORT/$NAGIOS_VERSION.tar.gz                  #URL of nagios core archive
 
 NAGIOS_PLUGINS=http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.16.tar.gz  #URL of nagios plugis archive
 #Not working ---> must use a function, pass is 'plop' NDO_PASSWORD=plop              #NDO db password
@@ -69,7 +72,7 @@ echo "***** Downloading $NAGIOS_CORE to $PWD *****"
 do_with_root wget $NAGIOS_CORE 
 echo "***** Extracting Nagios *****"
 do_with_root tar xzf nagios-*
-cd nagios
+cd $NAGIOS_VERSION
 echo "***** Configuration and compilation of Nagios core *****"
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios --with-command-user=nagios --with-command-group=nagios --enable-event-broker --enable-nanosleep --enable-embedded-perl --with-perlcache
 do_with_root make all
