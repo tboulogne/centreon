@@ -97,33 +97,33 @@ CENTSTORAGE_INSTALL_RUNLVL=1
 ## Install directory
 INSTALL_DIR_NAGIOS="/usr/local/nagios"
 ## Configuration directory
-MONITORING_ETC="/usr/local/nagios/etc"
+MONITORINGENGINE_ETC="/usr/local/nagios/etc"
 ## Plugins directory
-MONITORING_PLUGIN="/usr/local/nagios/libexec"
+MONITORINGENGINE_PLUGIN="/usr/local/nagios/libexec"
 ## Images (logos) directory
-MONITORING_IMG="/usr/local/nagios/share/images/logos"
+MONITORINGENGINE_IMG="/usr/local/nagios/share/images/logos"
 ## The nagios binary (optional)
-MONITORING_BINARY="/usr/local/nagios/bin/nagios"
+MONITORINGENGINE_BINARY="/usr/local/nagios/bin/nagios"
 ## The nagiostats binary (optional)
 NAGIOSTATS_BINARY="/usr/local/nagios/bin/nagiostats"
 ## Logging directory
-MONITORING_VAR="/usr/local/nagios/var"
+MONITORINGENGINE_VAR="/usr/local/nagios/var"
 ## Nagios user (optional)
-MONITORING_USER="nagios"
-## If you want to force MONITORING_USER, set FORCE_MONITORING_USER to 1 (optional)
-FORCE_MONITORING_USER=1
+MONITORINGENGINE_USER="nagios"
+## If you want to force MONITORINGENGINE_USER, set FORCE_MONITORINGENGINE_USER to 1 (optional)
+FORCE_MONITORINGENGINE_USER=1
 ## Nagios group (optional)
-MONITORING_GROUP="nagiosgrp"
-## If you want to force MONITORING_GROUP, set FORCE_MONITORING_GROUP to 1 (optional)
-FORCE_MONITORING_GROUP=1
+MONITORINGENGINE_GROUP="nagiosgrp"
+## If you want to force MONITORINGENGINE_GROUP, set FORCE_MONITORINGENGINE_GROUP to 1 (optional)
+FORCE_MONITORINGENGINE_GROUP=1
 ## Nagios p1.pl file (perl embedded)
-MONITORING_P1_FILE="/usr/local/nagios/bin/p1.pl"
+MONITORINGENGINE_P1_FILE="/usr/local/nagios/bin/p1.pl"
 ## If you want to not use NDO (not recommended)
 #FORCE_NOT_USE_NDO=1
 ## Nagios NDO module
 NDOMOD_BINARY="/usr/local/nagios/bin/ndomod.o"
 ## Nagios init script (optional)
-MONITORING_INIT_SCRIPT="/etc/init.d/nagios"
+MONITORINGENGINE_INIT_SCRIPT="/etc/init.d/nagios"
 ################################################## ###################
 ## End: Nagios preferences
 ################################################## ###################
